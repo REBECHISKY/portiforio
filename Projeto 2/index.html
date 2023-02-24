@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>  header {
+        background-color: #ffffff;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+        text-align: center;
+    }
+    h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        color: #680202;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: normal;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #000000;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        margin: 0 10px;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 5px;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.2s ease-in-out;
+    }
+
+    a:hover {
+        border-bottom-color: #000;
+    }
+
+    #livestream-status {
+        background-color: rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+        position: absolute;
+        width: 70%;
+        bottom: 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #livestream-status p {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    #livestream-status.online p {
+        animation: none;
+        color: red;
+    }
+
+    #livestream-status.offline p {
+        color: rgb(255, 255, 255);
+        animation: blink2 1s infinite;
+    }
+
+    @keyframes blink2 {
+        0% {
+            color: rgb(0, 0, 0);
+        }
+        50% {
+            color: rgb(0, 0, 0);
+        }
+        100% {
+            color: rgb(255, 255, 255);
+        }
+    }
+    #livestream-iframe {
+  width: 100%;
+  height: calc(100% - 70px);
+  margin-right: 80px;
+}
+
+        </style>
+	<title>ACAVACHARCUTARIA - Canal e Loja</title>
+</head>
+<body>
+
+	<!-- Cabeçalho -->
+    <header>
+        <h1><a href="index.html">A CAVA CHARCUTARIA</a></h1>
+        <font aria-setsize="12"><h</h2> <p>Um verdadeiro banquete de sabores artesanais!</p></h2></font>
+        <ul>
+            <li><a href="Loja.html">A Loja</a></li>
+            <li><a href="a">Sobre</a></li>
+            <li><a href="a">Contatos</a></li>
+            <li><a href="a">Videos</a></li>
+        </ul>
+    </header>
+    
+    <!-- Conteúdo principal -->
+    <main>
+        <div id="livestream-container">
+            <!-- Vídeo do canal -->
+            <iframe id="livestream-iframe" src="https://www.youtube.com/embed/live_stream?channel=UC-XXXXX-XXXXX" frameborder="0" allowfullscreen></iframe>
+    
+            <!-- Status do livestream -->
+            <div id="livestream-status">
+			<p>online<span id="livestream-text"></span>.</p>
+		</div>
+    </center>
+        </main>
+	<!-- Script para verificar o status do livestream -->
+	<script>
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var response = JSON.parse(this.responseText);
+				var livestreamStatus = response.items[0].snippet.liveBroadcastContent;
+				if (livestreamStatus == "live") {
+					document.getElementById("livestream-text").innerHTML = "online";
+				} else {
+					document.getElementById("livestream-text").innerHTML = "offline";
+				}
+			}
+		};
+		xhttp.open("GET", "https://www.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=UC-XXXXX-XXXXX&key=YOUR_API_KEY", true);
+		xhttp.send();
+	</script>
+</body>
+</html>

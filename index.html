@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+  <style>
+/* Definição de variáveis de cores */
+    :root {
+      --bg-color: #0d0d0d; /* Cor de fundo */
+      --font-color: #fff; /* Cor do texto */
+      --accent-color: #00fffc; /* Cor de destaque */
+    }
+    
+    /* Estilo global */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    /* Estilo do corpo do site */
+    body {
+      background-color: var(--bg-color);
+      color: var(--font-color);
+      font-family: 'Segoe UI', sans-serif;
+      background: #000;
+
+    }
+    
+    /* Estilo do cabeçalho */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
+    
+    /* Estilo da navegação */
+    nav {
+      display: flex;
+      justify-content: center;
+      margin: 1rem;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    
+    nav li {
+      margin: 0 1rem;
+    }
+    
+    nav a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+    }
+    
+    /* Estilo das seções */
+    section {
+      padding: 2rem;
+      margin: 2rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+    
+    ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+    }
+    
+    /* Estilo do rodapé */
+    footer {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+    #aviso {
+  background-color: #000000;
+  border: 1px solid #ffe600;
+  padding: 10px;
+  text-align: center;
+}
+
+    </style>
+  <head>
+    <title>Meu site HTML</title>
+  </head>
+  <body>
+    <header>
+      <h1>Bem-vindo ao meu site HTML</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html" onclick="verificarPagina(event, 'index.html')">Página Inicial</a></li>
+        <li><a href="sobre.html" onclick="verificarPagina(event, 'sobre.html')">Sobre</a></li>
+        <li><a href="contato.html" onclick="verificarPagina(event, 'contato.html')">Contato</a></li>
+      </ul>
+      <font color="yellow"><div id="aviso" style="display:none;">Você já está nesta página!</div></font>
+    </nav>
+    <main>
+      <section>
+        <h2>Sobre mim</h2>
+        <p>Eu sou um estudante de programação apaixonado por tecnologia.</p>
+      </section>
+      <section>
+        <h2>Meus projetos</h2>
+        <ul>
+          <li><a href="Projeto 1/index.html">Projeto 1</a></li>
+          <li><a href="Projeto 2/index.html">Projeto 2</a></li>
+          <li><a href="#">Projeto 3</a></li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Meu site HTML</p>
+    </footer>
+    <script>
+      // Seu código JavaScript aqui
+      function verificarPagina(event, link) {
+  // verifica se a página atual é a mesma que a página do link
+  if (location.pathname.endsWith(link)) {
+    // impede o link de abrir a página novamente
+    event.preventDefault();
+    // exibe o aviso
+    document.getElementById('aviso').style.display = 'block';
+  }
+}
+    </script>  
+  </body>
+</html>

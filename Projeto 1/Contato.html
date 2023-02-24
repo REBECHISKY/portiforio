@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+      }
+      
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+      }
+      
+      h1 {
+        margin: 0;
+        font-size: 36px;
+        text-transform: uppercase;
+      }
+      
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+      }
+      
+      nav li {
+        margin-left: 20px;
+      }
+      
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+      
+      main {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff;
+      }
+      
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      
+      form label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      
+      form input[type="text"],
+      form input[type="email"],
+      form textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      
+      form textarea {
+        height: 200px;
+      }
+      
+      form button[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      
+      section#contato {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff;
+      }
+      
+      ul li {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      
+      ul li a {
+        color: #333;
+        text-decoration: none;
+      }
+      
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      .back-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      
+      @keyframes rainbow {
+        0% {
+          color: red;
+        }
+        16.666% {
+          color: orange;
+        }
+        33.333% {
+          color: yellow;
+        }
+        50% {
+          color: green;
+        }
+        66.666% {
+          color: blue;
+        }
+        83.333% {
+          color: indigo;
+        }
+        100% {
+          color: violet;
+        }
+      }
+      
+      .back-button span {
+        animation: rainbow 2s infinite;
+      }
+      .blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    background-color: red;
+  }
+  33% {
+    background-color: purple;
+  }
+  66% {
+    background-color: blue;
+  }
+  100% {
+    background-color: red;
+  }
+}
+</style>
+</head> 
+
+<body>
+  <header>
+    <h1>Viés construindo consciência</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Cursos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h2>Entre em contato conosco</h2>
+    <form action="#" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+  <section id="contato">
+    <h2>Entre em contato conosco</h2>
+    <p>Para entrar em contato conosco, utilize um dos canais abaixo:</p>
+    <ul>
+        <li><a href="https://api.whatsapp.com/send?phone=5511969186295">Whatsapp Cleber: +55 11 96918-6295</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=5511948318009">Whatsapp Andreia: +55 11 94831-8009</a></li>
+        <li><a href="https://www.instagram.com/viesconstruindoconsciencia/">Instagram: @viesconstruindoconsciencia</a></li>
+        <li><a href="https://www.facebook.com/viesconstruindoconsciencia">Facebook: Viés Construindo Consciência</a></li>
+    </ul>
+</section>
+</main>
+  <footer>
+    <font color="white"><p>© 2023 Viés construindo consciência. Todos os direitos reservados.</p></font>
+  </footer>
+  <button id="voltar-btn" class="back-button" onclick="voltarPagina()"><span>Voltar</span></button>
+
+<script>
+  const botaoVoltar = document.getElementById("voltar-btn");
+
+  botaoVoltar.addEventListener("click", function() {
+    animarBotaoVoltar();
+    setTimeout(function() {
+      voltarPagina();
+    }, 2000);
+  });
+
+  function animarBotaoVoltar() {
+    // código para animar o botão aqui
+  }
+
+  function voltarPagina() {
+    window.location.href = "index.html";
+  }
+</script>
+</body>
+</html>

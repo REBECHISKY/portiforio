@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>body {
+        background-color: #0d0d0d;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      header {
+        text-align: center;
+        padding: 20px;
+        background-color: #282a36;
+      }
+      
+      header h1 {
+        font-size: 4em;
+        margin: 0;
+      }
+      
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+      }
+      
+      section {
+        margin-bottom: 40px;
+      }
+      
+      h2 {
+        font-size: 2em;
+        margin: 0 0 20px;
+      }
+      
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      
+      ul li {
+        margin-bottom: 10px;
+      }
+      
+      a {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 2px solid #6272a4;
+      }
+      
+      a:hover {
+        border-bottom: 2px solid #8be9fd;
+      }
+      
+      /* Estilos de tema espacial */
+      body {
+        background-image: url('espaco.jpg');
+        background-size: cover;
+      }
+      
+      header {
+        background-color: #44475a;
+      }
+      
+      h1, h2 {
+        color: #fff;
+        text-shadow: 2px 2px #6272a4;
+      }
+      
+      ul li {
+        color: #fff;
+        text-shadow: 2px 2px #6272a4;
+      }
+      .rocket-button {
+	font-size: 24px;
+	padding: 20px 30px;
+	border-radius: 50px;
+	background-color: #4a4a4a;
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+	position: relative;
+}
+
+.rocket-button img {
+	max-width: 20%;
+}
+
+.rocket {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: rocket-exit 1s ease-out forwards;
+	opacity: 1;
+}
+
+@keyframes rocket-exit {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+		opacity: 1;
+	}
+	50% {
+		transform: translate(-50%, -50%) rotate(180deg);
+		opacity: 0.5;
+	}
+	100% {
+		transform: translate(-50%, -2000px) rotate(180deg);
+		opacity: 0;
+	}
+}
+
+
+
+      </style>
+    <title>Sobre mim</title>
+  </head>
+  <body>
+    <header>
+      <h1>Sobre mim</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Quem sou eu</h2>
+        <p>Meu nome é [seu nome] e sou um(a) [sua profissão ou área de atuação]. Atualmente trabalho na empresa [nome da empresa] como [sua posição na empresa].</p>
+      </section>
+      <section>
+        <h2>Minha formação</h2>
+        <ul>
+          <li>[Nome do curso] - [Nome da instituição] - [Ano de conclusão]</li>
+          <li>[Nome do curso] - [Nome da instituição] - [Ano de conclusão]</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Minhas habilidades</h2>
+        <ul>
+          <li>[Nome da habilidade]</li>
+          <li>[Nome da habilidade]</li>
+          <li>[Nome da habilidade]</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Meus projetos</h2>
+        <ul>
+          <li><a href="Projeto 1/index.html">Projeto 1</a></li>
+          <li><a href="#">Projeto 2</a></li>
+          <li><a href="#">Projeto 3</a></li>
+        </ul>
+      </section>
+    </main>
+    <p style="font-size: 1.2em; font-weight: bold;">Clique abaixo para voltar à página inicial:</p>
+    <button class="rocket-button" onclick="exitPage()"><img src="https://static.wixstatic.com/media/290fed_ebded07c4dd64dba8ba96f30bc06a0a0~mv2.png/v1/fill/w_360,h_354,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/astronautadigital-capa.png" alt="Foguete"></button>
+</div>
+    <footer>
+      <p>&copy; [Ano] [Seu nome]</p>
+    </footer>
+    <script src="script2.js"></script>
+  </body>
+</html>

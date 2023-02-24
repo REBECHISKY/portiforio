@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso de Reiki - Viés construindo consciência</title>
+	<style>
+		body {
+			background-image: url('https://guiadaalma.com.br/wp-content/uploads/2022/04/14048-7nd9.gif');
+			background-size: cover;
+			background-position: center;
+		}
+
+		h1 {
+			text-align: center;
+			color: #fff;
+			font-size: 3em;
+			margin-top: 50px;
+		}
+
+		#nav {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
+		}
+
+		#nav a {
+			color: #fff;
+			font-size: 1.5em;
+			margin: 0 20px;
+			text-decoration: none;
+		}
+
+		#nav a:hover {
+			text-decoration: underline;
+		}
+
+		#main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 100px;
+		}
+
+		#main p {
+			color: #fff;
+			font-size: 1.2em;
+			margin-bottom: 30px;
+			text-align: justify;
+			max-width: 800px;
+		}
+
+		#main button {
+			background-color: #fff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 1.2em;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		#main button:hover {
+			background-color: #ddd;
+		}
+
+        #footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #575555;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+		}
+        /* Estilização geral do pop-up */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo dos campos de entrada do formulário */
+#popup input[type="text"],
+#popup input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #f2f2f2;
+  font-size: 16px;
+}
+
+/* Estilo do botão Enviar */
+#popup button[type="submit"] {
+  background-color: #ffffff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Estilo do botão Fechar */
+#popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Estilo do fundo escuro do pop-up */
+.popup-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+	</style>
+</head>
+<body>
+	<h1>Viés Construindo Consciência</h1>
+
+	<div id="nav">
+		<a href="Sobre.html">Sobre</a>
+		<a href="Cursos.html">Cursos</a>
+		<a href="Contato.html">Contato</a>
+	</div>
+
+	<div id="main">
+		<font color="white"><p>O curso de Reiki "Viés construindo consciência" tem como objetivo fornecer aos alunos uma introdução aos princípios e práticas do Reiki. Durante o curso, você aprenderá técnicas de cura, meditação e autoconhecimento para ajudá-lo a alcançar um estado de equilíbrio e bem-estar emocional.</p></font>
+
+        <button onclick="exibirPopup()" style="background-color: #4CAF50; /* Cor de fundo */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;">Inscreva-se agora</button>
+        
+        <div id="popup" style="display:none;">
+          <!-- Conteúdo do pop-up -->
+          <form>
+            <font color="white"><label for="nome">Nome:</label></font>
+            <input type="text" id="nome" name="nome">
+            <br>
+            <font color="white"><label for="email">Email:</label></font>
+            <input type="email" id="email" name="email">
+            <br>
+            <button type="submit" style="background-color: #4CAF50; /* Cor de fundo */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;">Enviar</button>
+          </form>
+        </div>
+        <div id="footer">
+          <p>© 2023 Viés construindo consciência. Todos os direitos reservados.</p>
+        </div>
+        <script>
+          function exibirPopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "block";
+          }
+        </script>
+</body>
+</html>

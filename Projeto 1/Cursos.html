@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<style>
+  /* Estilos para o body */
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://www.vash-reiki.co.za/wp-content/uploads/2013/10/magic-reiki.gif');
+    background-size: cover;
+    margin: 0;
+  }
+  
+  /* Estilos para o header */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  header nav li {
+    margin-right: 10px;
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Estilos para o main */
+  main {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  main h2 {
+    text-align: center;
+  }
+  
+  .curso {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  
+  .curso img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .curso .info {
+    padding: 10px;
+  }
+  
+  .curso h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .curso p {
+    margin: 5px 0;
+    font-size: 14px;
+    text-align: justify;
+  }
+  
+  /* Estilos para o footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Estilos para o botão de voltar */
+  .back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #555;
+  }
+  
+  .back-button:active {
+    background-color: #222;
+  }
+  .container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.texto-bloco {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  scroll-snap-align: center;
+}
+
+.botao-esquerda, .botao-direita {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.botao-esquerda {
+  left: 10px;
+}
+
+.botao-direita {
+  right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .texto-bloco {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.texto-bloco {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  overflow: auto;
+  max-height: 200px;
+  transition: all 0.5s;
+}
+
+.texto-bloco:hover {
+  max-height: 400px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid black;
+  padding: 40px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding-top: 15px;
+}
+.texto-bloco {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  opacity: 0.8;
+}
+.botao-inicio {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+</style> 
+  <meta charset="UTF-8">
+  <title>Cursos de Reiki</title>
+</head>
+<body>
+  <header>
+    <h1>Cursos de Reiki</h1>
+    <nav>
+      <ul>
+        <li><a href="#reiki1">Reiki 1</a></li>
+        <li><a href="#reiki2">Reiki 2</a></li>
+        <li><a href="#reiki3">Reiki 3</a></li>
+        <li><a href="#mestrado">Mestrado</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="texto-bloco">
+        <h2>Reiki 1</h2>
+        <p>Este curso é o primeiro nível de Reiki e é indicado para iniciantes que desejam aprender a técnica de cura energética. No curso de Reiki 1, os alunos aprendem os princípios básicos do Reiki e recebem sua iniciação. O curso geralmente dura um fim de semana e é ministrado por um mestre de Reiki.
+      
+          Pré-requisitos: nenhum.</p>
+      </div>
+      <div class="texto-bloco">
+        <h2>Reiki 2</h2>
+        <p>Este curso é o segundo nível de Reiki e é indicado para aqueles que já concluíram o curso de Reiki 1 e desejam aprofundar seus conhecimentos e habilidades. No curso de Reiki 2, os alunos aprendem a usar símbolos de Reiki e técnicas avançadas de cura energética.
+      
+          Pré-requisitos: curso de Reiki 1.</p>
+      </div>
+      <div class="texto-bloco">
+        <h2>Reiki 3</h2>
+        <p>Este curso é o terceiro nível de Reiki e é indicado para aqueles que já concluíram os cursos de Reiki 1 e 2 e desejam se tornar mestres de Reiki. No curso de Reiki 3, os alunos aprendem a ensinar Reiki e iniciam outros alunos no Reiki.
+      
+          Pré-requisitos: cursos de Reiki 1 e 2.</p>
+      </div>
+      <div class="texto-bloco">
+        <h2>Mestrado</h2>
+        <p>O curso de mestrado em Reiki é indicado para aqueles que já concluíram os cursos de Reiki 1, 2 e 3 e desejam se tornar mestres de Reiki avançados. No curso de mestrado, os alunos aprendem técnicas avançadas de cura energética, ensinam outros mestres de Reiki e se aprofundam em sua própria jornada de cura e desenvolvimento pessoal.
+      
+          Pré-requisitos: cursos de Reiki 1, 2 e 3.</p>
+        </div>
+        <div class="texto-bloco">
+          <h2>Apometria</h2>
+          <p>Apometria é uma técnica terapêutica que utiliza procedimentos meditativos para acessar planos vibratórios sutis e promover a cura energética. A prática tem como objetivo tratar questões emocionais, mentais e espirituais que afetam a saúde física e mental. É uma terapia complementar que pode ser utilizada em conjunto com outras práticas de saúde.
+        
+            Pré-requisitos: Nenhum</p>
+          </div>
+    </section>
+  </main>
+  <a href="index.html" class="botao-inicio">Voltar para a página inicial</a>
+
+  <footer>
+    <p>© 2023 Cursos de Reiki. Todos os direitos reservados.</p>
+  </

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        /* Estilos para a barra de navegação */
+        nav {
+          background-color: #000000;
+          color: #f5f5f5;
+          padding: 10px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 9999;
+        }
+        nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          text-align: center;
+        }
+        nav li {
+          display: inline-block;
+          margin: 0 10px;
+        }
+        nav a {
+          color: #000000;
+          font-size: 18px;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        nav a:hover {
+      color: #ff0303;
+    }
+
+    /* Estilos para os blocos de produtos e cabeçalho */
+    section, header {
+      max-width: 800px;
+      margin: 70px auto 50px;
+    }
+
+    h2, h1, p {
+      color: #ff0e0e;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    header {
+      background-color: #353535;
+      padding: 20px;
+    }
+
+    header a img {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Estilos para os blocos de produtos */
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    li {
+      background-color: #464646;
+      border: 1px solid #0a0000;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      width: 200px;
+    }
+
+    li a {
+      display: block;
+      text-decoration: none;
+    }
+
+    li img {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 10px;
+      display: block;
+    }
+
+    li h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    li p {
+      font-size: 14px;
+      color: #000000;
+    }
+
+    li:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    /* Estilos para o botão de comprar */
+    button {
+      background-color: #000000;
+      border: none;
+      border-radius: 3px;
+      color: #ffffff;
+      font-size: 16px;
+      margin-top: 10px;
+      padding: 10px;
+      text-transform: uppercase;
+    }
+
+    button:hover {
+      background-color: #ff0303;
+    }
+    
+    header a img {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  z-index: 9999;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Minha loja</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="icone.png">
+  </head>
+  <body>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Página 1</a></li>
+      <li><a href="#">Página 2</a></li>
+      <li><a href="#">Página 3</a></li>
+    </ul>
+  </nav>
+  <header>
+    <a href="index.html"><img src="https://cdn.awsli.com.br/400x300/818/818944/logo/b6b64bc3bf.jpg" alt="Ícone de volta para a página inicial"></a>
+  </header>
+  <main>
+      <h2>Produtos</h2>
+      <ul>
+        <li>
+          <img src="produto1.jpg" alt="Produto 1">
+          <h3>Produto 1</h3>
+          <p>R$ 10,00</p>
+          <button>Comprar</button>
+        </li>
+        <li>
+          <img src="produto2.jpg" alt="Produto 2">
+          <h3>Produto 2</h3>
+          <p>R$ 20,00</p>
+          <button>Comprar</button>
+        </li>
+        <li>
+          <img src="produto3.jpg" alt="Produto 3">
+          <h3>Produto 3</h3>
+          <p>R$ 30,00</p>
+          <button>Comprar</button>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>body {
+        background-color: #000000;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 50px 20px;
+    }
+    
+    h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    
+    .links {
+        display: flex;
+        justify-content: center;
+    }
+    
+    a {
+        margin: 0 20px;
+    }
+    
+    img {
+        width: 50px;
+        height: 50px;
+    }
+    .rocket-button {
+	font-size: 24px;
+	padding: 20px 30px;
+	border-radius: 50px;
+	background-color: #4a4a4a;
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+	position: relative;
+}
+
+.rocket-button img {
+	max-width: 100%;
+}
+
+.rocket {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: rocket-exit 1s ease-out forwards;
+	opacity: 1;
+}
+
+@keyframes rocket-exit {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+		opacity: 1;
+	}
+	50% {
+		transform: translate(-50%, -50%) rotate(180deg);
+		opacity: 0.5;
+	}
+	100% {
+		transform: translate(-50%, -2000px) rotate(180deg);
+		opacity: 0;
+	}
+}
+
+
+    </style>
+	<title>Contato</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+        <h1>Entre em contato</h1>
+        <p>Para falar comigo, você pode enviar uma mensagem no WhatsApp ou me seguir no Instagram:</p>
+        <div class="buttons">
+          <a href="https://wa.me/5511948013347" class="whatsapp" target="_blank">WhatsApp</a>
+          <a href="https://www.instagram.com/rebechyi/" class="instagram" target="_blank">Instagram</a>
+        </div>
+      </div>  
+      <p style="font-size: 1.2em; font-weight: bold;">Clique abaixo para voltar à página inicial:</p>   
+      <button class="rocket-button" onclick="exitPage()"><img src="https://cdn-icons-png.flaticon.com/512/619/619054.png" alt="Foguete"></button>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
